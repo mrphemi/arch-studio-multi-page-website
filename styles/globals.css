@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1, h2, h3 {
+        @apply text-very-dark-blue font-bold 
+    }
+
+    h1 {   
+        @apply text-5xl leading-48 md:text-80 md:leading-80
+    }
+
+    h2 {   
+        @apply text-40 leading-48 md:text-56 md:leading-56
+    }
+
+    h3 {   
+        @apply text-lg leading-25
+    }
+
+    p {
+        @apply text-base leading-25 text-dark-grey font-medium
+    }
+}
+
+@layer utilities {
+    .grey-large-heading {   
+        @apply text-very-light-grey text-120 xl:text-largest md:leading-large font-bold;
+    }
+}
