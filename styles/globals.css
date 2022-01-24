@@ -3,29 +3,46 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        @apply text-base leading-[25px] text-dark-grey font-medium
+    }
+
     h1, h2, h3 {
         @apply text-very-dark-blue font-bold 
     }
 
     h1 {   
-        @apply text-5xl leading-48 md:text-80 md:leading-80
+        @apply text-5xl leading-[48px] md:text-[80px] md:leading-[80px]
     }
 
     h2 {   
-        @apply text-40 leading-48 md:text-56 md:leading-56
+        @apply text-[40px] leading-[48px] md:text-[56px] md:leading-[56px]
     }
 
     h3 {   
-        @apply text-lg leading-25
+        @apply text-lg leading-[25px]
     }
 
     p {
-        @apply text-base leading-25 text-dark-grey font-medium
+        @apply text-dark-grey
     }
 }
 
-@layer utilities {
+@layer utilities { 
+    .container {
+        @apply px-8 md:px-0 md:w-4/5 xl:max-w-[1110px]
+    }
+    
     .grey-large-heading {   
-        @apply text-very-light-grey text-120 xl:text-largest md:leading-large font-bold;
+        @apply text-very-light-grey text-[120px] xl:text-[200px] md:leading-[200px] font-bold tracking-[-5px];
+    }
+    
+    .swiper-pagination-bullet {
+        @apply w-20 h-full flex justify-center items-center bg-white cursor-pointer rounded-none opacity-100
+    }
+    
+    .swiper-pagination-bullet.active {
+        @apply bg-very-dark-blue
     }
 }
+

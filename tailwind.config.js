@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         sans: ["Spartan", ...defaultTheme.fontFamily.sans],
       },
+      container: {
+        center: true,
+      },
       colors: {
         "dark-grey": "#60636D",
         "medium-grey": "#7D828F",
@@ -17,18 +20,10 @@ module.exports = {
       },
       fontSize: {
         base: "15px",
-        40: "40px",
-        56: "56px",
-        80: "80px",
-        120: "120px",
-        largest: "200px",
       },
-      lineHeight: {
-        25: "25px",
-        48: "48px",
-        56: "56px",
-        80: "80px",
-        large: "200px",
+      screens: {
+        "2xl": "1440px",
+        "3xl": "1536px",
       },
     },
   },
