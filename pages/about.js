@@ -125,15 +125,15 @@ export default function About() {
           {/* Overlay */}
           <div className="absolute top-0 left-0 w-full h-full md:h-full xl:w-[637px] xl:h-[720px] bg-black opacity-40"></div>
         </div>
-
-        <div className="px-8 pt-[72px] w-11/12 relative -mt-12 bg-white md:absolute md:-bottom-1 md:-right-1 md:pl-[59px] md:w-[572px] xl:w-auto xl:relative self-end xl:right-40 xl:bottom-0">
+        {/* xl:w-auto */}
+        <div className="px-8 md:pr-0 xl:pl-24 pt-[72px] w-11/12 relative -mt-12 bg-white md:absolute md:-bottom-1 md:-right-1 md:pl-[59px] md:w-[572px] xl:w-full  xl:relative self-end xl:right-40 xl:bottom-0">
           <motion.h1
             variants={largeHeadingVariant}
             className="grey-large-heading hidden md:block mb-0 capitalize z-10 absolute -top-24 right-2 xl:-left-5 xl:-top-28"
           >
             about
           </motion.h1>
-          <div className="">
+          <div className="w-full">
             <span className="border-t-2 border-very-light-grey h-2 w-16 md:block mb-16 md:mt-8 xl:mt-20"></span>
             <div className="space-y-4 md:space-y-12">
               <motion.h2 variants={headingVariant}>

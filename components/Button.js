@@ -17,17 +17,14 @@ const buttonVariants = {
   },
 };
 
-const arrowSVGVariants = {
-  rest: { pathLength: 1 },
-  hover: { pathLength: [0, 0.5, 1], transition: { duration: 1 } },
-};
-
-export default function Button({ text, link, className }) {
+export default function Button({ text = "", link, className }) {
+  const sharedStyles =
+    "inline-flex justify-center items-center space-x-6 bg-very-dark-blue active:bg-light-grey";
   return (
     <>
       {!link && (
         <button
-          className={`inline-flex space-x-6 bg-very-dark-blue hover:bg-medium-grey active:bg-light-grey py-6 px-8 justify-center items-center ${className}`}
+          className={`${sharedStyles} hover:bg-medium-grey py-6 px-8 ${className}`}
         >
           <span className="capitalize text-white">{text}</span>
           <svg
@@ -49,7 +46,7 @@ export default function Button({ text, link, className }) {
             whileHover="hover"
             whileTap="tap"
             variants={buttonVariants}
-            className={`inline-flex space-x-6 bg-very-dark-blue active:bg-light-grey py-6 px-8 justify-center items-center cursor-pointer ${className}`}
+            className={`${sharedStyles} py-6 px-8 cursor-pointer ${className}`}
           >
             <span className="capitalize text-white">{text}</span>
             <svg
@@ -64,10 +61,7 @@ export default function Button({ text, link, className }) {
                 stroke="#FFFFFF"
                 strokeWidth="2"
               >
-                <motion.path
-                  variants={arrowSVGVariants}
-                  d="M15 1l9 9-9 9M0 10h24"
-                />
+                <path d="M15 1l9 9-9 9M0 10h24" />
               </g>
             </svg>
           </motion.a>

@@ -35,8 +35,8 @@ function MyApp({ Component, pageProps, router }) {
           src="https://unpkg.com/swiper@7/swiper-bundle.min.js"
         ></script>
       </Head>
+      <Nav />
       <AnimatePresence exitBeforeEnter>
-        <Nav />
         <motion.div
           initial="hidden"
           animate="visible"
@@ -46,8 +46,8 @@ function MyApp({ Component, pageProps, router }) {
         >
           <Component {...pageProps} />
         </motion.div>
+        <Footer />
       </AnimatePresence>
-      <Footer />
     </>
   );
 }
